@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="FinalProject.css">
+        <title>Book Order</title>
+        <script type="text/javascript" src="FinalProject.js"></script>
+        
+    </head>
+    <body>
+        <div id="header">
+            <div id="logo"><img src="WebImages/book.png" width="200px" height="150px"/></div>
+            <div id="nav">
+                <ul>
+                    <li><a href="Combine.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li> 
+                </ul>
+            </div>
+        </div>
+        <form action="#">
+            <div id="fullpage">
+                <h1>Make your order.</h1>
+                <table border="0">
+                    <tr>
+                        <td class="label_col">First Name:</td>
+                        <td class="input_col"><input name="firstName" id="firstName" type="text" onblur="validateFirstName();"></td>
+                        <td class="feedback_col"><span id="firstNamePrompt"style="margin-left:10px;">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                        <td class="label_col">Last Name:</td>
+                        <td class="input_col"><input name="lastName" id="lastName" type="text" onblur="validateLastName();"></td>
+                        <td class="feedback_col"><span id="lastNamePrompt" style="margin-left:10px;">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                        <td class="label_col">Phone Number:</td>
+                        <td class="input_col"><input name="phone" id="phone" type="text" onblur="validatePhone();" placeholder="xxxx-xxxx"></td>
+                        <td class="feedback_col"><span id="phonePrompt" style="margin-left:10px;">xxxx-xxxx</span></td>
+                    </tr>
+                    <tr>
+                        <td class="label_col">Date:</td>
+                        <td class="input_col"><input type="date" name="birthday"></td>
+                    </tr>
+                    <tr>
+                        <td class="label_col">Book Title:</td>
+                        <div class="radio">
+                        <td>
+                            <input class="radio_input" type="radio" name="skills" value="Enchanted" id="radio1">
+                            <label class="radio_label" for="radio1">Enchanted</label><br>
+                            <input class="radio_input" type="radio" name="skills" value="Sad" id="radio2">
+                            <label class="radio_label" for="radio2">Sadness Curse</label></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td class="label_col">Item Price:</td>
+                        <td class="input_col"><input name="price" id="price" type="text" value="15.00" readonly></td>
+                    </tr>
+                    <tr>
+                        <td class="label_col">Order Quantity:</td>
+                        <td class="input_col"><input name="quantity" id="quantity" type="number"></td>
+                        <td class="feedback_col"><span id="quantityPrompt" style="margin-left: 10px; color: rgb(187, 40, 40);">1&ndash;55</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" style="border: 8px; font-family: montserrat; cursor: pointer;" value="Order Now" onclick="calc()"></td>
+                    </tr>
+                </table>
+
+                <span id="orderConfirm">&nbsp;</span>
+            </div>
+        </form>
+        <div id="footer"><strong>&copy; Final Project. All rights reserved.</strong></div>
+    </body>
+</html>
